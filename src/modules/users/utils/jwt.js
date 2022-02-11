@@ -2,9 +2,6 @@ const jwt = require("jsonwebtoken");
 const fs = require("fs");
 const path = require("path");
 
-// const configPath = path.resolve(__dirname + "/../../../../config.json");
-// const appConf = JSON.parse(fs.readFileSync(configPath, "utf-8"));
-
 async function getLongLivedToken(body, expireTime) {
   return new Promise((resolve, reject) => {
     try {
@@ -22,7 +19,7 @@ async function getLongLivedToken(body, expireTime) {
 async function verifyLongLivedToken(token) {
   return new Promise((resolve, reject) => {
     try {
-      const secret = appConf.JWT_SECRET;
+      const secret = "APP";
       jwt.verify(token, secret, (err, payload) => {
         if (err) reject(err);
         resolve(payload);

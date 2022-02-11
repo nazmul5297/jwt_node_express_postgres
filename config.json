@@ -1,7 +1,7 @@
 {
   "JWT_SECRET": "helloworldtojwt",
   "DB_USER": "postgres",
-  "DB_PASSWORD": "1234",
+  "DB_PASSWORD": "123456",
   "DB_HOST": "localhost",
   "DB_PORT": 5432,
   "DB_NAME": "jwt"
